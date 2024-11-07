@@ -1,0 +1,214 @@
+/* Estilo Global */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+}
+
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Encabezado */
+
+header{
+    background-color: #006994;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+}
+
+header h1 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.leyenda{
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+header nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+header nav ul li{
+    margin: 0 15px;
+}
+
+header nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* Contenido principal */
+
+main{
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px 0;
+}
+
+.articulos{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+@media(min-width: 768px){
+    .articulos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(min-width: 992px) {
+    .articulos {
+grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+/* Estilo de cada artículo*/
+
+.post{
+    background-color: #e4f1f7;
+    border-radius: 8px;
+    overflow:hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.post img{
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.post-content{
+    padding: 15px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.post-content h2{
+    font-size: 24px;
+    color: #006994;
+    margin-bottom: 5px;
+}
+
+.post-content p{
+    color: #555;
+    line-height: 26px;
+    flex-grow: 16px;
+}
+
+/* Secciones */
+
+.nosotros, .destinos, .opiniones, .contacto{
+    padding: 20px;
+    max-width: 1200px;
+    margin: 20px auto;
+}
+
+.destinos{
+    width: 100%;
+    text-align: center;
+}
+
+.destinos h2{
+    font-size: 30px;
+    color: #006994;
+    margin-bottom: 20px;
+}
+
+/* Grid destinos */
+
+.grid-destinos{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    justify-items: center;
+}
+
+@media (min-width: 768px){
+    .grid-destinos{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.destino{
+    background-color: #e4f1f7;
+    padding: 20px;
+
+}
+
+/* Opiniones */
+
+.opiniones{
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonio .testimonio{
+    background-color: #e4f1f7;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+/* Formulario de contacto */
+
+.formulario-contacto{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+/*Footer*/
+
+footer{
+    background-color: #006994;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+    font-size: 14px;
+}
+
+.footer-links{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 20px;
+}
+
+.footer-links li a img{
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+.footer-links li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
