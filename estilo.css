@@ -52,7 +52,7 @@ header nav ul li a{
     font-size: 20px;
 }
 
-/* Contenido principal */
+/* Banner principal */
 
 main{
     width: 90%;
@@ -60,20 +60,99 @@ main{
     margin: 20px 0;
 }
 
-.articulos{
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
+.banner{
+    background-image: url('img/avion.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    color: #fff;
 }
 
+
+.banner-content h2{
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.banner-content p{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    background-color: #3399cc;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.cta-button:hover{
+    background-color: #006994;
+}
+
+/* Destinos destacados */
+
+.destinos-destacados {
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .destinos-destacados h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #555;
+  }
+  
+  .destinos-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .destino {
+    width: 300px;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s;
+  }
+  
+  .destino:hover {
+    transform: scale(1.05);
+  }
+  
+  .destino-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    font-size: 16px; 
+    line-height: 20px; 
+    max-height: 100%;
+    overflow: auto;
+  }
+
 @media(min-width: 768px){
-    .articulos {
+    .articulo {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media(min-width: 992px) {
-    .articulos {
+    .articulo {
 grid-template-columns: repeat(3, 1fr);
     }
 }
@@ -126,6 +205,30 @@ grid-template-columns: repeat(3, 1fr);
     margin: 20px auto;
 }
 
+.nosotros{
+    max-width: 800px;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nosotros h2{
+    font-size: 32px;
+    text-align: center;
+    color: #3399cc;
+    margin-bottom: 15px;
+}
+
+.nosotros p{
+    text-align: justify;
+    font-size: 16px;
+    line-height: 28px;
+    margin-top: 10px;
+}
+
+/* Destinos */
+
 .destinos{
     width: 100%;
     text-align: center;
@@ -136,8 +239,6 @@ grid-template-columns: repeat(3, 1fr);
     color: #006994;
     margin-bottom: 20px;
 }
-
-/* Grid destinos */
 
 .grid-destinos{
     display: grid;
@@ -152,20 +253,23 @@ grid-template-columns: repeat(3, 1fr);
     }
 }
 
-.destino{
-    background-color: #e4f1f7;
-    padding: 20px;
-
-}
 
 /* Opiniones */
 
 .opiniones{
     display: flex;
     flex-direction: column;
+
 }
 
-.testimonio .testimonio{
+.opiniones h2{
+    font-size: 30px;
+    color: #006994;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.testimonio{
     background-color: #e4f1f7;
     padding: 15px;
     margin: 10px 0;
@@ -173,7 +277,13 @@ grid-template-columns: repeat(3, 1fr);
     font-size: 16px;
 }
 
-/* Formulario de contacto */
+/* Contacto */
+.contacto h2{
+    font-size: 30px;
+    color: #006994;
+    margin-bottom: 20px;
+    text-align: center;
+}
 
 .formulario-contacto{
     display: flex;
@@ -185,11 +295,12 @@ grid-template-columns: repeat(3, 1fr);
 /*Footer*/
 
 footer{
+    width: 100%;
     background-color: #006994;
     color: #fff;
     text-align: center;
     padding: 15px;
-    width: 100%;
+
     font-size: 14px;
 }
 
@@ -205,6 +316,7 @@ footer{
     width: 20px;
     height: 20px;
     vertical-align: middle;
+    border-radius: 8px;
 }
 
 .footer-links li a{
